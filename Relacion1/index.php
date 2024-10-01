@@ -88,15 +88,11 @@
         }
     }
 
-    #10 Obtener los primeros 20 términos de la secuencia de Fibonacci. Esta secuencia comienza por 0 y 1, y el resto de los términos se pueden calcular sumando los dos anteriores. 
-    $num1 = 0;
-    $num2 = 1;
-    $fibo = [];
-    $fibo[0] = $num1;
-    $fibo[1] = $num2;
+    #10 Obtener los primeros 20 términos de la secuencia de fibonaccinacci. Esta secuencia comienza por 0 y 1, y el resto de los términos se pueden calcular sumando los dos anteriores. 
+    $fibonacci = [0,1];
     for ($i = 2; $i <= 20; $i++){
-        $fibo[$i] =  $fibo[$i-1] + $fibo[$i-2];
+        $fibonacci[$i] =  $fibonacci[$i-1] + $fibonacci[$i-2];
     }
-    foreach($fibo as $number){
+    foreach($fibonacci as $number){
         echo $number.' ';
     };
