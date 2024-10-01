@@ -87,4 +87,13 @@
             echo 'No es primo';
         }
     }
+
+    #10 Obtener los primeros 20 términos de la secuencia de Fibonacci. Esta secuencia comienza por 0 y 1, y el resto de los términos se pueden calcular sumando los dos anteriores. 
+    $num1 = 0;
+    $num2 = 1;
+    array();
+    for ($i = 1; $i <= 18; $i++){
+        
+
+    }
     
