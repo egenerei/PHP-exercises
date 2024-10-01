@@ -1,98 +1,127 @@
 <?php
-    #1 Dado un número, devolver su valor absoluto como una salida. 
-    $num= 4.5;
-    if ($num < 0){
+    #1 Given a number, return its absolute value as output.
+    #Variable initialization
+    $num = -4.5;
+    $num_abs = $num;
+    #Program
+    if ($num < 0) { #Checks if the number is negative to multiply by -1
         $num_abs = $num * -1;
     }
-    echo 'El valor absoluto es: ',$num;
+    #Output
+    echo 'The absolute value is: ', $num_abs;
 
-    #2 Dados dos números, devolver un mensaje que indique el mayor de los dos.
-    $num1= 7;
-    $num2= 0;
-    if ($num1 > $num2) {
-        echo $num1,' es mayor que ',$num2;
-    } 
-    else {
-        echo $num2,' es mayor que ',$num1;
+    echo '</br>';
+    #2 Given two numbers, return a message indicating the greater of the two.
+    #Variable initialization
+    $num1 = 7;
+    $num2 = 0;
+    #Program
+    if ($num1 > $num2) { #Compares num1 with num2. If num1 is greater, outputs it
+        echo $num1, ' is greater than ', $num2;
+    } else { #By default, num2 will be greater (it can also indicate that they are equal)
+        echo $num2, ' is greater than ', $num1;
     }
     
-    #3 Mejora el código anterior para mostrar si ambos números son iguales. 
-    $num1= 7;
-    $num2= 7;
-    if ($num1 > $num2) {
-        echo $num1,' es mayor que ',$num2;
-    } 
-    else if ($num1 < $num2){
-        echo $num2,' es mayor que ',$num1;
-    }
-    else {
-        echo $num2,' es igual a ',$num1;
+    echo '</br>';
+    #3 Improve the previous code to show if both numbers are equal.
+    #Variable initialization
+    $num1 = 7;
+    $num2 = 7;
+    #Program
+    if ($num1 > $num2) { #Compares num1 with num2. If num1 is greater, outputs it
+        echo $num1, ' is greater than ', $num2;
+    } else if ($num1 < $num2) { #Compares num1 with num2. If num2 is greater, outputs it
+        echo $num2, ' is greater than ', $num1;
+    } else { #If neither is greater than the other, they are equal
+        echo $num2, ' is equal to ', $num1;
     }
     
-    #4 Dados dos números, devolver un mensaje para mostrarlos ordenados del más pequeño al más grande. 
+    echo '</br>';
+    #4 Given two numbers, return a message to show them ordered from smallest to largest.
+    #Variable initialization
     $num1 = 4;
     $num2 = 8;
-    if ($num1 > $num2) {
-        echo $num1, $num2;
-    } 
-    else {
-        echo $num2, $num1;
+    #Program
+    if ($num1 > $num2) { #Compares num1 with num2. If num1 is greater, it will be the first output
+        echo $num1, ', ', $num2;
+    } else { #By default, num2 will appear first, whether it is greater or equal to num1
+        echo $num2, ', ', $num1;
     }
     
-    #5 Dado un año, devolver un mensaje para indicar si es bisiesto o no. Los años bisiestos son aquellos que son divisibles por 4, excepto aquellos que son divisibles por 100 sin ser por 400. 
+    echo '</br>';
+    #5 Given a year, return a message indicating if it is a leap year or not. Leap years are those that are divisible by 4, except those that are divisible by 100 without being divisible by 400.
+    #Variable initialization
     $ano = 1700;
-    if ($ano % 4 == 0 and ($ano % 100 != 0 or  $ano % 400 == 0)) {
-        echo $ano, ' es bisiesto';
-    } 
-    else{
-        echo $ano, ' no es bisiesto';
+    #Program
+    if ($ano % 4 == 0 && ($ano % 100 != 0 || $ano % 400 == 0)) {
+        echo $ano, ' is a leap year';
+    } else {
+        echo $ano, ' is not a leap year';
     }
     
-    #6 Devolver la suma de los números del 1 al 100.
+    echo '</br>';
+    #6 Return the sum of the numbers from 1 to 100.
+    #Variable initialization
     $suma = 0; 
-    for ($i = 1; $i <= 100; $i++){
+    #Program
+    for ($i = 1; $i <= 100; $i++) {
         $suma += $i;
     }
+    #Output
     echo $suma;
 
-    #7 Devolver el factorial de 10. 
+    echo '</br>';
+    #7 Return the factorial of 10.
+    #Variable initialization
     $num = 10;
-    $factorial = $num;
-    for ($i = 1; $i < $num; $i++){
-        $factorial = $factorial * $i;
+    $factorial = 1; # Changed to 1 for correct factorial calculation
+    #Program
+    for ($i = 1; $i <= $num; $i++) {
+        $factorial *= $i;
     }
+    #Output
     echo $factorial;
 
-    #8 Dado un entero, devolver todos sus divisores. 
+    echo '</br>';
+    #8 Given an integer, return all its divisors.
+    #Variable initialization
     $num = 10;
-    for ($i = 1; $i <= $num; $i++){
-        if ($num % $i == 0){
-            echo $i;
+    #Program
+    echo 'Divisors of ' . $num . ': ';
+    for ($i = 1; $i <= $num; $i++) {
+        if ($num % $i == 0) {
+            echo $i . ' ';
         }
     }
 
-    #9 Dado un entero, devolver un mensaje para señalar si es primo o no. 
+    echo '</br>';
+    #9 Given an integer, return a message to indicate whether it is prime or not.
+    #Variable initialization
     $num = 11;
     $num_divisores = 0;
-    if ($num > 1){
-        for ($i = 1;$i <= $num;$i++){
-            if ($num % $i == 0){
+    #Program
+    if ($num > 1) {
+        for ($i = 1; $i <= $num; $i++) {
+            if ($num % $i == 0) {
                 $num_divisores++;
             }
         }
-        if ($num_divisores = 2){
-            echo 'El número es primo';
-        }
-        else {
-            echo 'No es primo';
+        if ($num_divisores == 2) { # Changed to comparison ==
+            echo 'The number is prime';
+        } else {
+            echo 'Not prime';
         }
     }
 
-    #10 Obtener los primeros 20 términos de la secuencia de fibonaccinacci. Esta secuencia comienza por 0 y 1, y el resto de los términos se pueden calcular sumando los dos anteriores. 
-    $fibonacci = [0,1];
-    for ($i = 2; $i <= 20; $i++){
-        $fibonacci[$i] =  $fibonacci[$i-1] + $fibonacci[$i-2];
+    echo '</br>';
+    #10 Get the first 20 terms of the Fibonacci sequence. This sequence starts with 0 and 1, and the rest of the terms can be calculated by adding the two previous ones.
+    #Variable initialization
+    $fibonacci = [0, 1]; #Array to store the data
+    #Program
+    for ($i = 2; $i < 20; $i++) { # Changed to < 20 to get the first 20 terms
+        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
     }
-    foreach($fibonacci as $number){
-        echo $number.' ';
-    };
+    #Output
+    foreach ($fibonacci as $number) {
+        echo $number . ' ';
+    }
