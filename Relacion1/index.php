@@ -42,7 +42,7 @@
     $num1 = 4;
     $num2 = 8;
     #Program
-    if ($num1 > $num2) { #Compares num1 with num2. If num1 is greater, it will be the first output
+    if ($num1 < $num2) { #Compares num1 with num2. If num1 is greater, it will be the first output
         echo $num1, ', ', $num2;
     } else { #By default, num2 will appear first, whether it is greater or equal to num1
         echo $num2, ', ', $num1;
@@ -107,7 +107,7 @@
             }
         }
         if ($num_divisores == 2) { # Changed to comparison ==
-            echo 'The number is prime';
+            echo 'The number ',$num, ' is prime';
         } else {
             echo 'Not prime';
         }
