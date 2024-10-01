@@ -72,15 +72,15 @@
     }
 
     #9 Dado un entero, devolver un mensaje para señalar si es primo o no. 
-    $num = 2;
+    $num = 11;
     $num_divisores = 0;
-    if ($num > 0){
+    if ($num > 1){
         for ($i = 1;$i <= $num;$i++){
             if ($num % $i == 0){
                 $num_divisores++;
             }
         }
-        if ($num_divisores < 3 and $num_divisores > 1){
+        if ($num_divisores = 2){
             echo 'El número es primo';
         }
         else {
