@@ -16,7 +16,6 @@ echo'<h3> a. Crea una página que muestre los 100 primeros números de la serie 
 echo '</br>';
 echo'<h3> b. Crea una función que muestre por pantalla los N primeros números de la serie de Fibonacci: function Fibonacci(N)</h3>';
     function fibonacci($number) { #function
-    
         #Variable initialization
         $fibonacci = [0, 1];
         #Program
@@ -41,3 +40,36 @@ echo'<h3> c. Crea una función que devuelva el elemento i de la serie de Fibonac
     }
 
 echo fibonacci_i(20);
+
+echo '</br>';
+echo '<h2>2. Diseña las siguientes funciones de cálculo geométrico:</h2>';
+require_once 'functions.php';
+
+$lado = 5; #Cuadrado de lado 5
+echo'<h4> a. function Cuadrado_Perimetro(lado)</h4>';
+echo "El perímetro del cuadrado es: ".cuadrado_perimetro($lado)."</br>";
+echo'</br><h4> b. function Cuadrado_Area(lado)</h4>';
+echo "El área del cuadrado es: ".cuadrado_area($lado)."</br>";
+
+$lado1 = 4; #Rectángulo de lados 4 y 5
+$lado2 = 5;
+echo'</br><h4> c. function Rectangulo_Perimetro(lado1, lado2)</h4>';
+echo "El perímetro del rectángulo es: ".rectangulo_perimetro($lado1, $lado2)."</br>";
+echo'</br><h4> d. function Rectangulo_Area(lado1, lado2)</h4>';
+echo "El área del rectángulo es: ".rectangulo_area($lado1, $lado2)."</br>";
+
+$base = 7; #Triángulo de base 7 y altura 5
+$altura = 5;
+echo'</br><h4> e. function Triangulo_Rectangulo_Perimetro(base,altura)</h4>';
+echo "El perímetro del triángulo rectángulo es: ".triangulo_rectangulo_perimetro($base, $altura)."</br>";
+echo'</br><h4> f. function Triangulo_Rectangulo_Area(base,altura)</h4>';
+echo "El área del triángulo rectángulo es: ".triangulo_rectangulo_area($base, $altura)."</br>";
+
+$lado = 8; #Triángulo de lado 8
+echo'</br><h4> g. function Triangulo_Equilatero_Perimetro(lado)</h4>';
+echo "El perímetro del triángulo equilátero es: ".triangulo_equilatero_perimetro($lado)."</br>";
+echo'</br><h4> h. function Triangulo_Equilatero_Area(lado)</h4>';
+echo "El área del triángulo equilátero es: ".triangulo_equilatero_area($lado)."</br>";
+
+$name = readline("Enter your name: ");
+echo "Hello, $name!";
