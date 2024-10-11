@@ -71,5 +71,23 @@ echo "El perímetro del triángulo equilátero es: ".triangulo_equilatero_perime
 echo'</br><h4> h. function Triangulo_Equilatero_Area(lado)</h4>';
 echo "El área del triángulo equilátero es: ".triangulo_equilatero_area($lado)."</br>";
 
-$name = readline("Enter your name: ");
-echo "Hello, $name!";
+
+
+#EJ 3
+session_start();
+if ($_SESSION['ran_num'] == null){
+    $_SESSION['ran_num']  = rand(1,1000);
+    $_SESSION['trys'] = 0;
+    $_SESSION['user_num'] = [];
+}
+
+
+echo $_SESSION['ran_num'];
+echo '</br>';
+echo $_SESSION['trys'];
+echo '</br>';
+echo $_SESSION['user_num'];
+
+
+
+
