@@ -46,13 +46,13 @@ $temperaturas = array("Enero" => 12.5, "Febrero" => 13.9,
         <tbody>
             <?php
             #Program
-                foreach ($temperaturas as $key => $value) { #This foreach calculates the amount of - needed
+                foreach ($temperaturas as $key => $value) { #
                     echo '<tr style="font-family: monospace; font-size: 40px">'.'<td>'.$key;
-                        for ($i = 0;$i < ( 15 - strlen($key) ); $i++ ){
+                        for ($i = 0;$i < ( 15 - strlen($key) ); $i++ ){#This foreach calculates the amount of - needed
                             echo '-';
                         }
                     echo '>';
-                    for ($i = 0;$i < $value ; $i++ ){ #This for calculates the amount of images neede to represent the temperature
+                    for ($i = 0;$i < (int)$value ; $i++ ){ #This for calculates the amount of images neede to represent the temperature
                         echo '<img src="images/barraTemp.png" alt="MDN" style="border: 1px solid black"/>';
                     }
                     if ($value > (int)$value){ #This if checks if the temperature needs decimal bars 
