@@ -13,7 +13,7 @@ function es_par($number){
 }
 
 function ordena_dos($value1,$value2){
-    $ordered = $value1.' , '.$value2; 
+    $ordered = $value2.' , '.$value1; 
     if ($value2 < $value1){
         $ordered = $value2.' , '.$value1;
     }
