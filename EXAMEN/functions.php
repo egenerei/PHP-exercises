@@ -6,7 +6,7 @@ function calcular_edad($persona){
 }
 
 function salario_anual($persona){
-    return $persona["salario_mensual"] * 14;
+    return $persona["salario_mensual"] * 12;
 }
 
 function veterano($persona){
@@ -28,3 +28,4 @@ function iniciales_2($persona){
     }
     return $iniciales;
 }
+

@@ -151,9 +151,17 @@ echo veterano($empleados[0]);
 echo "</br>";
 echo iniciales_2($empleados[2]);
 echo "</br>";
-
+$media_edad = 0;
+for ($i =0; $i < count($empleados);$i++ ){
+    $media_edad += calcular_edad($empleados[$i]);
+}
+echo $media_edad/count($empleados);
 echo "</br>";
-
+$salario_medio = 0;
+for ($i =0; $i < count($empleados);$i++ ){
+    $salario_medio += salario_anual($empleados[$i]);
+}
+echo $salario_medio/count($empleados);
 echo "</br>";
 
 echo "</br>";
