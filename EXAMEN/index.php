@@ -126,7 +126,35 @@ print_r ($numeros);
 
 echo "</br>";
 
+//21
+$empleados = [
+    ["nombre" => "Juan Pérez", "fecha_nacimiento" => "1980-05-15", "salario_mensual" => 2000, "fecha_ingreso" => "2010-06-01", "ciudad" => "Madrid"],
+    ["nombre" => "Ana López", "fecha_nacimiento" => "1992-11-22", "salario_mensual" => 2500, "fecha_ingreso" => "2015-03-15", "ciudad" => "Barcelona"],
+    ["nombre" => "Carlos García", "fecha_nacimiento" => "1975-08-30", "salario_mensual" => 3000, "fecha_ingreso" => "2008-10-10", "ciudad" => "Sevilla"],
+    ["nombre" => "Elena Ruiz", "fecha_nacimiento" => "1985-02-18", "salario_mensual" => 2800, "fecha_ingreso" => "2012-07-20", "ciudad" => "Valencia"],
+    ["nombre" => "Mario Martínez", "fecha_nacimiento" => "1990-07-05", "salario_mensual" => 2400, "fecha_ingreso" => "2016-04-10", "ciudad" => "Bilbao"],
+    ["nombre" => "Laura Gómez", "fecha_nacimiento" => "1988-12-12", "salario_mensual" => 2200, "fecha_ingreso" => "2011-01-15", "ciudad" => "Madrid"],
+    ["nombre" => "Sergio Torres", "fecha_nacimiento" => "1982-09-21", "salario_mensual" => 2600, "fecha_ingreso" => "2009-11-01", "ciudad" => "Málaga"],
+    ["nombre" => "Isabel Fernández", "fecha_nacimiento" => "1995-05-14", "salario_mensual" => 2700, "fecha_ingreso" => "2017-06-25", "ciudad" => "Zaragoza"],
+    ["nombre" => "Ricardo Ortega", "fecha_nacimiento" => "1978-03-03", "salario_mensual" => 3200, "fecha_ingreso" => "2005-08-15", "ciudad" => "Murcia"],
+    ["nombre" => "Patricia Sánchez", "fecha_nacimiento" => "1991-01-30", "salario_mensual" => 2900, "fecha_ingreso" => "2018-09-10", "ciudad" => "Barcelona"]
+];
 
+require "functions.php";
 
+echo calcular_edad($empleados[0]);
+echo "</br>";
+echo salario_anual($empleados[0]);
+echo "</br>";
+echo veterano($empleados[0]);
 
+echo "</br>";
+echo iniciales_2($empleados[2]);
+echo "</br>";
+
+echo "</br>";
+
+echo "</br>";
+
+echo "</br>";
 
