@@ -23,14 +23,12 @@ function verificadorNIF($dni){
     return $validar;
 }
 
-#Programa
+#Programa (Dependiendo del número de cifras introudcidas, utiliza una función u otra)
 if (!empty($dni)) {
-    if (strlen($dni) == 8) {
-        // Call calculaLetraNIF for 8-digit DNI without letter
+    if (strlen($dni) == 8) { #Si solo se introducen 8 cifras se considera que se está buscando averiguar la letra del NIF
         $letra = calculaLetraNIF($dni);
         echo "La letra correspondiente al DNI es: " . $letra;
-    } elseif (strlen($dni) == 9) {
-        // Call verificadorNIF for 9-character NIF with letter
+    } elseif (strlen($dni) == 9) { #Si se introducen 9 caracteres, se busca validar el NIF
         if (verificadorNIF($dni)) {
             echo "El NIF es válido.";
         } else {
@@ -40,6 +38,6 @@ if (!empty($dni)) {
         echo "El DNI/NIF introducido no es correcto.";
     }
 }
-if (empty($dni)){
+if (empty($dni)){ #Por si no se introduce el DNI
     echo 'DNI no introducido';
 }
