@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Saludo</title>
+</head>
+<body>
+    <form action="saludo.php" method="post">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre">
+        </br>
+        <label for="correo">Email: </label>
+        <input type="email" id="nombre" name="correo">
+        </br>
+        <label for="rol">Rol</label>
+        <select name="roles[]" id="rol" multiple >
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+            <option value="personal">Personal</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
