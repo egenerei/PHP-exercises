@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Seguros Baratos</title>
+</head>
+<body>
+    <form action="procesaSeguro.php" method="post">
+        <fieldset>
+            <legend>Tomador</legend>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre">
+            </br>
+            <label for="carnet">Ano de obtencion carnet: </label>
+            <input type="number" id="carnet" name="carnet">
+            </br>
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="hombre" name="sexo" value="hombre">
+            </br>
+            <label for="mujer">Mujer</label>
+            <input type="radio" id="mujer" name="sexo" value="mujer">
+        </fieldset>
+        <fieldset>
+            <legend>Vehiculo</legend>
+            <label for="matricula">Matricula: </label>
+            <input type="text" id="matricula" name="matricula">
+            </br>
+            <label for="ano_matricula">Ano de matriculacion: </label>
+            <input type="number" id="ano_matricula" name="ano_matricula">
+            </br>
+            <label for="tipo">Combustible</label>
+            <select name="tipo" id="tipo">
+                <option value="diesel">Diesel</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="glp">GLP</option>
+                <option value="electrico">Electrico</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Modalidad</legend>
+            <label for="basica">Basica</label>
+            <input type="radio" id="basica" name="modalidad" value="basica">
+            </br>
+            <label for="inter">Intermedia</label>
+            <input type="radio" id="inter" name="modalidad" value="intermedia">
+            </br>
+            <label for="todo">A todo riesgo</label>
+            <input type="radio" id="todo" name="modalidad" value="todo_riesgo">
+        </fieldset>
+        </br>
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>
