@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bocata-Casa</title>
+    
+</head>
+<body>
+    <h1>BOCATA-CASA</h1>
+    </br>
+    <h2>Para realizar su pedido rellene el formulario</h2>
+    <form action="procesaBocataCasa.php" method="post">
+        <fieldset>
+            <legend>Datos personales y envío</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+            </br>
+            <label for="domicilio">Domicilio</label>
+            <input type="text" id="domicilio" name="domicilio">
+            </br>
+            <label for="localidad">Localidad</label>
+            <input type="text" id="localidad" name="localidad">
+            <label for="cp">Código Postal</label>
+            <input type="number" id="cp" name="cp">
+            </br>
+            <label for="telefono">Teléfono</label>
+            <input type="number" id="telefono" name="telefono">
+        </fieldset>
+        <fieldset>
+            <legend>Elija la opción de entrega</legend>
+            <label for="local">Recoger en el local</label>
+            <input type="radio" id="local" name="entrega" value="local">
+            <label for="domicilio">Envíar a domicilio</label>
+            <input type="radio" id="domicilio" name="entrega" value="domicilio">
+        </fieldset>
+        <fieldset>
+            <input type="checkbox" id="publi1" name="publi1" value="papel">
+            <label for="publi1">Enviar al domicilio</label>
+            <input type="checkbox" id="publi2" name="publi2" value="email">
+            <label for="publi2">Enviar al email</label>
+            <input type="checkbox" id="publi3" name="publi3" value="wasap">
+            <label for="publi3">Enviar por Whatsapp</label>
+        </fieldset>
+        <fieldset>
+            <label for="tamano">Tamaño bocadillo</label></br>
+            <select id="tamano" name="tamano">
+                <option value="pequeño">Pequeño</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+            </select></br>
+            <label for="bocadillo">Elige un tipo de bocadillo:</label></br>
+            <select name="bocadillo" id="bocadillo" required>
+                <option value="" disabled selected>-- Selecciona una opción --</option>
+                <option value="jamon-queso">Clásico jamón y queso</option>
+                <option value="vegetariano-mediterraneo">Vegetariano mediterráneo</option>
+                <option value="pollo-cesar">Pollo césar</option>
+                <option value="atun-pimientos">Atún y pimientos</option>
+                <option value="caprese-italiano">Caprese italiano</option>
+                <option value="carne-mechada-queso">Carne mechada con queso fundido</option>
+                <option value="huevo-bacon">Huevo y bacon</option>
+                <option value="pavo-aguacate">Pavo con aguacate</option>
+                <option value="tortilla-espanola">Bocadillo de tortilla de patatas</option>
+                <option value="chorizo-queso-crema">Chorizo picante con queso crema</option>
+            </select>
+            <br><br>
+            <label for="comentarios">¿Algún comentario o preferencia?</label>
+            <br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe aquí tus comentarios..."></textarea>
+            <br><br>
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
