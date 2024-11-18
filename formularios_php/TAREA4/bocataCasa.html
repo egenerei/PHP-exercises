@@ -34,21 +34,22 @@
             <input type="radio" id="domicilio" name="entrega" value="domicilio">
         </fieldset>
         <fieldset>
-            <input type="checkbox" id="publi1" name="publi1" value="papel">
+            <input type="checkbox" id="publi1" name="publi1" value="True">
             <label for="publi1">Enviar al domicilio</label>
-            <input type="checkbox" id="publi2" name="publi2" value="email">
+            <input type="checkbox" id="publi2" name="publi2" value="True">
             <label for="publi2">Enviar al email</label>
-            <input type="checkbox" id="publi3" name="publi3" value="wasap">
+            <input type="checkbox" id="publi3" name="publi3" value="True">
             <label for="publi3">Enviar por Whatsapp</label>
         </fieldset>
         <fieldset>
-            <label for="tamano">Tamaño bocadillo</label></br>
+            <label for="tamano">Tamaño de tu bocadillo</label></br>
             <select id="tamano" name="tamano">
-                <option value="pequeño">Pequeño</option>
+                <option value="pequeno">Pequeño</option>
                 <option value="mediano">Mediano</option>
                 <option value="grande">Grande</option>
+                <option value="super">Supergrande</option>
             </select></br>
-            <label for="bocadillo">Elige un tipo de bocadillo:</label></br>
+            <label for="bocadillo">Elige la variedad:</label></br>
             <select name="bocadillo" id="bocadillo" required>
                 <option value="" disabled selected>-- Selecciona una opción --</option>
                 <option value="jamon-queso">Clásico jamón y queso</option>
