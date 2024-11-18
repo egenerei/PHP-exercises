@@ -1,22 +1,22 @@
 <?php
 #variables
-const base = 2;
+const BASE = 2;
 $oferta = 0.25;
-$precio = base;
+$precio = BASE;
 $tipo = $_POST['bocadillo'];
 $tamano = $_POST['tamano'];
 $recoger = $_POST['entrega'];
 $opciones = [
-    "jamon-queso" => "Clásico jamón y queso",
-    "vegetariano-mediterraneo" => "Vegetariano mediterráneo",
-    "pollo-cesar" => "Pollo césar",
-    "atun-pimientos" => "Atún y pimientos",
-    "caprese-italiano" => "Caprese italiano",
-    "carne-mechada-queso" => "Carne mechada con queso fundido",
-    "huevo-bacon" => "Huevo y bacon",
-    "pavo-aguacate" => "Pavo con aguacate",
-    "tortilla-espanola" => "Bocadillo de tortilla de patatas",
-    "chorizo-queso-crema" => "Chorizo picante con queso crema",
+    "jamon-queso" => "clásico jamón y queso",
+    "vegetariano-mediterraneo" => "vegetariano mediterráneo",
+    "pollo-cesar" => "pollo césar",
+    "atun-pimientos" => "atún y pimientos",
+    "caprese-italiano" => "caprese italiano",
+    "carne-mechada-queso" => "carne mechada con queso fundido",
+    "huevo-bacon" => "huevo y bacon",
+    "pavo-aguacate" => "pavo con aguacate",
+    "tortilla-espanola" => "bocadillo de tortilla de patatas",
+    "chorizo-queso-crema" => "chorizo picante con queso crema",
 ];
 $tamanos = [
     "pequeno" => "pequeño",
@@ -41,16 +41,10 @@ switch ($tamano) {
         break;
 }
 
-if (isset($_POST['publi1'])){
-    $precio -= $oferta;
-}
-
-if (isset($_POST['publi2'])){
-    $precio -= $oferta;
-}
-
-if (isset($_POST['publi3'])){
-    $precio -= $oferta;
+foreach (['publi1', 'publi2', 'publi3'] as $publi) {
+    if (isset($_POST[$publi])) {
+        $precio -= $oferta;
+    }
 }
 
 switch ($tipo){
@@ -64,6 +58,6 @@ switch ($tipo){
         break;
 }
 
-echo 'El precio de su bocata '. $opciones[$tipo] .' '. $tamanos[$tamano].' es de: '.$precio.' euros.';
+echo 'El precio de su bocata '. $opciones[$tipo] .' '. $tamanos[$tamano].' es de: '.number_format($precio, 2).' euros.';
 echo '</br>';
 echo '<button><a href="bocataCasa.html">Pide otro</a></button>';

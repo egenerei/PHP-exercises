@@ -2,38 +2,41 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bocata-Casa</title>
-    
 </head>
 <body>
     <h1>BOCATA-CASA</h1>
-    </br>
     <h2>Para realizar su pedido rellene el formulario</h2>
     <form action="procesaBocataCasa.php" method="post">
+
         <fieldset>
             <legend>Datos personales y envío</legend>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre">
-            </br>
-            <label for="domicilio">Domicilio</label>
-            <input type="text" id="domicilio" name="domicilio">
-            </br>
-            <label for="localidad">Localidad</label>
-            <input type="text" id="localidad" name="localidad">
-            <label for="cp">Código Postal</label>
-            <input type="number" id="cp" name="cp">
-            </br>
-            <label for="telefono">Teléfono</label>
-            <input type="number" id="telefono" name="telefono">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio" name="domicilio" required>
+            <br>
+            <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad" name="localidad" required>
+            <label for="cp">Código Postal:</label>
+            <input type="number" id="cp" name="cp" required>
+            <br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789" required>
         </fieldset>
+        
         <fieldset>
             <legend>Elija la opción de entrega</legend>
+            <input type="radio" id="local" name="entrega" value="local" required>
             <label for="local">Recoger en el local</label>
-            <input type="radio" id="local" name="entrega" value="local">
-            <label for="domicilio">Envíar a domicilio</label>
             <input type="radio" id="domicilio" name="entrega" value="domicilio">
+            <label for="domicilio">Envíar a domicilio</label>
         </fieldset>
+
         <fieldset>
+            <legend>Preferencias de publicidad</legend>
             <input type="checkbox" id="publi1" name="publi1" value="True">
             <label for="publi1">Enviar al domicilio</label>
             <input type="checkbox" id="publi2" name="publi2" value="True">
@@ -41,15 +44,20 @@
             <input type="checkbox" id="publi3" name="publi3" value="True">
             <label for="publi3">Enviar por Whatsapp</label>
         </fieldset>
+
         <fieldset>
-            <label for="tamano">Tamaño de tu bocadillo</label></br>
-            <select id="tamano" name="tamano">
+            <legend>Detalle del pedido</legend>
+            <label for="tamano">Tamaño de tu bocadillo:</label>
+            <br>
+            <select id="tamano" name="tamano" required>
                 <option value="pequeno">Pequeño</option>
                 <option value="mediano">Mediano</option>
                 <option value="grande">Grande</option>
                 <option value="super">Supergrande</option>
-            </select></br>
-            <label for="bocadillo">Elige la variedad:</label></br>
+            </select>
+            <br><br>
+            <label for="bocadillo">Elige la variedad:</label>
+            <br>
             <select name="bocadillo" id="bocadillo" required>
                 <option value="" disabled selected>-- Selecciona una opción --</option>
                 <option value="jamon-queso">Clásico jamón y queso</option>
@@ -67,8 +75,8 @@
             <label for="comentarios">¿Algún comentario o preferencia?</label>
             <br>
             <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe aquí tus comentarios..."></textarea>
-            <br><br>
         </fieldset>
+
         <input type="submit" value="Enviar">
     </form>
 </body>
