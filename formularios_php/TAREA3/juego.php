@@ -14,6 +14,7 @@ if ($EU[$pais] == $ciudad){
 }
 else{
     echo 'Fallaste</br>';
+    echo 'La capital de '.$pais. ' es '.$EU[$pais];
 }
 
 echo '<button><a href="index.php">Vuelve a jugar</a></button>';

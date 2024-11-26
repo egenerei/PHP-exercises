@@ -1,0 +1,5 @@
+[Desktop Entry]
+Icon=inode-directory
+Name=http
+Type=Link
+URL[$e]=file:$HOME/http
