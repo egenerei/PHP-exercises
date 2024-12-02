@@ -9,5 +9,5 @@ if ($_SESSION['validar_inicio']==true){
 }
 else{
     echo 'No has iniciado sesión correctamente';
-    echo '<a href="logout.php">Vuelve a iniciar</a>'
+    echo '<a href="logout.php">Vuelve a iniciar</a>';
 }
