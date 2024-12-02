@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Productos</title>
+</head>
+<body>
+    <h1>Formulario de Pedido</h1>
+    <form action="procesar_pedido.php" method="post">
+        <!-- Nombre del usuario -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+
+        <!-- Seleccionar tipo de producto -->
+        <label for="tipo">Tipo de producto:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="pienso">Pienso</option>
+            <option value="correas">Correas</option>
+            <option value="juguetes">Juguetes</option>
+            <option value="otros">Otros</option>
+        </select>
+        <br><br>
+
+        <!-- Seleccionar número de unidades -->
+        <label for="unidades">Número de unidades:</label>
+        <select id="unidades" name="unidades" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br><br>
+
+        <!-- Seleccionar marca del producto -->
+        <label for="marca">Marca del producto:</label>
+        <select id="marca" name="marca" required>
+            <option value="acana">Acana</option>
+            <option value="royal-canin">Royal Canin</option>
+            <option value="purina">Purina</option>
+            <option value="orijen">Orijen</option>
+        </select>
+        <br><br>
+
+        <!-- Botón para enviar -->
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</body>
+</html>
