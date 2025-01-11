@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Página principal del proyecto de figuras planas:
+    Muestra un menú donde seleccionamos la figura sobre la que queremos 
+    calcular los datos.
+    La figura seleccionada se enviará a la página procesaMenuFiguras.php
+    que determinará la figura seleccionada y ejecutará la página adecuada.
+-->
+<html>
+    <head>
+        <title>Proyecto FIGURAS PLANAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center>
+        <h1> Selecciona la figura plana que quieres calcular: </h1>
+        <form action="procesaMenuFiguras.php" method="GET">
+            <input type="radio" name="figura" value="circulo" checked >C&iacute;rculo<br>
+            <input type="radio" name="figura" value="cuadrado">Cuadrado<br>
+            <input type="radio" name="figura" value="rectangulo">Rect&aacute;ngulo<br>
+            <input type="radio" name="figura" value="trianguloE">Tri&aacute;ngulo Equil&aacute;tero<br>
+            <input type="radio" name="figura" value="trapecio">Trapecio<br>
+            <input type="radio" name="figura" value="pentagono">Pent&aacute;gono<br>
+            <input type="radio" name="figura" value="hexagono">Hex&aacute;gono<br>
+            <br>
+            <input type="submit" value="Continuar">
+        </form>
+        </center>
+    </body>
+    </body>
+</html>
