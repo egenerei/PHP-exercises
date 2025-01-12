@@ -2,6 +2,7 @@
 #echo $_GET['lado']."circulo_procesa";
 require_once "../clases/cuadrado.php";
 $objeto = new Cuadrado($_GET['lado']);
+#Paso los datos del objeto a una variable para trabajar de manera más sencilla
 $datos = $objeto->ficha();
 ?>
 <!DOCTYPE html>

@@ -10,7 +10,7 @@
 if (isset($_GET['figura'])) {
 
     $figura = $_GET['figura'];
-
+#He cambiado las rutas a los docus html para adaptarlas a mi estructura de archivos
     if (strcmp($figura, "circulo") == 0) {
         header("Location: pide/pideCirculo.html");
     } elseif (strcmp($figura, "cuadrado") == 0) {

@@ -2,6 +2,7 @@
 #echo $_GET['radio']."circulo_procesa";
 require_once "../clases/circulo.php";
 $objeto = new Circulo($_GET['radio']);
+#Paso los datos del objeto a una variable para trabajar de manera más sencilla
 $datos = $objeto->ficha();
 ?>
 <!DOCTYPE html>
