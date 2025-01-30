@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MQNTHF</title>
+    </head>
+    <body>
+        <h2> INTRODUCE LOS DATOS DEL SEGURO </h2> <br>
+        <form action="./calculaPoliza.php" method="post">
+            <fieldset>
+                <legend>TOMADOR </legend>
+                <label> NOMBRE </label> <input type="text" name="tomador" value="Antonio" /><br/>
+                <label> año de obtencion del carnet </label> <input type="number" name="anoCarnet" value="2012" /><br/>
+                <label> SEXO </label> <br/> 
+                <input type="radio" value="M" name="sexo"/>  <label> MUJER </label> 
+                <input type="radio" value="H" name="sexo" checked="checked"/>  <label> HOMBRE </label> 
+            </fieldset>
+            <fieldset>
+                <legend> VEHICULO </legend>
+                <label> Matrícula </label> <input type="text" name="matricula" value="1452HHH" /><br/>
+                <label> año de matriculación </label> <input type="number" name="anoMatriculacion" value="2012" /><br/>
+                <label> Tipo de combustible </label> <br/> 
+                <select name="combustible">
+                    <option value="E" >Eléctrico</option>
+                    <option value="G" >Gasolina</option>
+                    <option value="D" >Diésel</option>
+                    <option value="L" >gas Licuado</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>MODALIDAD </legend>
+                <label> Tipo de seguro </label> <br/> 
+                <input type="radio" value="B" name="modalidad"/>  <label> Básico </label> 
+                <input type="radio" value="I" name="modalidad" checked="checked"/>  <label> Intermedio </label> 
+                <input type="radio" value="T" name="modalidad"/>  <label> Todo riesgo </label> 
+            </fieldset>
+            <input type="submit" value="CALCULAR">
+        </form>
+    </body>
+</html>

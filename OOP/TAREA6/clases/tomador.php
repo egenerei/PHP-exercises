@@ -1,9 +1,9 @@
 <?php
 
 class Tomador {
-    private $nombre;
-    private $anocarnet;
-    private $sexo;
+    public $nombre;
+    public $anocarnet;
+    public $sexo;
 
     public function __construct($nombre, $anocarnet, $sexo){
         if ($nombre == "" || is_numeric($nombre)){
@@ -18,7 +18,7 @@ class Tomador {
         else{
             $this->anocarnet = 2024;
         }
-        if ($sexo != 'H' || $sexo != 'F'){
+        if ($sexo != 'H' && $sexo != 'F'){
             $this->sexo = 'M';
         }
         else{
@@ -29,6 +29,9 @@ class Tomador {
         return (2024 - $this->anocarnet);
     }
     public function ficha(){
-        return "Datos del tomador".$this->nombre."<br>Año de obtencion del carnet: ". $this->anocarnet."<br>SEXO: ". $this->sexo;
+        return "Datos del tomador<br>Nombre: ".$this->nombre."<br>Año de obtencion del carnet: ". $this->anocarnet."<br>SEXO: ". $this->sexo;
     }
 }
+#TEST
+// $tomador = new Tomador("","194","D");
+// echo $tomador->ficha();
