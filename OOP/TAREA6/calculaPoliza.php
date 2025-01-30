@@ -14,9 +14,9 @@ $modalidad = $_POST['modalidad'];
 
 $laPoliza = new Poliza($yo, $miCarro, $modalidad);
 
-echo $laPoliza->ficha();
-
-echo 'PERMITEME QUE INSISTA, son '. $laPoliza->Precio().' euros </br>';
+echo $laPoliza->ficha()."<br>";
+var_dump($laPoliza);
+echo 'PERMITEME QUE INSISTA, son '. $laPoliza->precio().' euros </br>';
 echo '<br>';
 //almacenamos $laPoliza en $_SESSION, para no perder el objeto si vamos
 //a otra página
