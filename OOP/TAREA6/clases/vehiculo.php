@@ -1,28 +1,50 @@
 <?php
 class Vehiculo{
-    public $matricula;
-    public $anomatriculacion;
-    public $combustible;
+    private $matricula;
+    private $anomatriculacion;
+    private $combustible;
 
     public function __construct($matricula,$anomatriculacion,$combustible){
+        $this->setMatricula($matricula);
+        $this->setAnoMatriculacion($anomatriculacion);
+        $this->setCombustible($combustible);
+    }
+
+    public function setMatricula($matricula){
         if (empty($matricula)){
             $this->matricula = "S/DATOS";
         }
         else{
             $this->matricula = $matricula;
         }
+    }
+
+    public function setAnoMatriculacion($anomatriculacion){
         if ($anomatriculacion >= 1950 && $anomatriculacion <= 2024){
             $this->anomatriculacion = $anomatriculacion;
         }
         else{
             $this->anomatriculacion = 2024;
         }
+    }
+
+    public function setCombustible($combustible){
         if ($combustible === "D" || $combustible === "E" || $combustible === "L"){
             $this->combustible = $combustible;
         }
         else {
             $this->combustible = "G";
         }
+    }
+
+    public function getMatricula(){
+        return $this->matricula;
+    }
+    public function getAnoMatricula(){
+        return $this->anomatriculacion;
+    }
+    public function getCombustible(){
+        return $this->combustible;
     }
 
     public function edadVehiculo(){
